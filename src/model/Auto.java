@@ -24,12 +24,19 @@ public class Auto {
 
     @Override
     public String toString(){
-        return String.format("%10s | %10s | %10s | %15.2f | %30s | %15.2f" , vin_no, brand, model, price_basic, getOrderedEquipmentNames(),calcFullPrice());
+        return String.format("%15s | %10s | %10s | %15.2f | %30s | %15.2f" , vin_no, brand, model, price_basic, getOrderedEquipmentNames(),calcFullPrice());
     }
     // metoda do zamówienia dodatkowego wyposazenia
     public  void setEquipmentOrderByMe(String name){
         int index = eq_name.indexOf(name);
-        eq_order.set(index, 1);
+        if(eq_order.get(index)== 0){
+            System.out.println("DODAJE");
+            //dodawanie do wyposazenia
+            eq_order.set(index, 1);
+        } else {
+            // usuwanie z wyposazenia
+            eq_order.set(index, 0);
+        }
     }
     // metoda zwracajaca cene auta z wyposazeniem
     public double calcFullPrice(){

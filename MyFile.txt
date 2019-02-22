@@ -1,0 +1,8 @@
+            VIN |      MARKA |      MODEL |            CENA |                    WYPOSAŻENIE |            SUMA
+   347122HYS801 |         VW |     Passat |       150000,00 |                                |       150000,00
+   36103BNH7453 |         VW |       Golf |       100000,00 |                           B,C, |       122000,00
+   98712WBZ0921 |         VW |     Tiguan |       200000,00 |                                |       200000,00
+   23610BHS9761 |         VW |   Scirocco |       180000,00 |                             B, |       190000,00
+
+
+DATA: 2019-02-22

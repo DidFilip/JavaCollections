@@ -1,7 +1,9 @@
 import controller.AutoController;
 
+import java.io.IOException;
+
 public class MainAuto {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         AutoController ac = new AutoController();
         ac.addAuto(
                 "347122HYS801",
@@ -25,6 +27,12 @@ public class MainAuto {
                 180000);
         ac.addEquipment("23610BHS9761","B");
         ac.addEquipment("23610BHS9761","C");
+        ac.getAllAutos();
+        ac.deleteEqipment("23610BHS9761","C");
+        ac.addEquipment("36103BNH7453", "C");
+        ac.addEquipment("36103BNH7453", "B");
+        ac.saveDataToFile("MyFile.txt");
+
         ac.getAllAutos();
     }
 }
